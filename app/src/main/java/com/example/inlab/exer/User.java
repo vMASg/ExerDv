@@ -67,4 +67,16 @@ public class User {
     public boolean comparePassword(String password) {
         return password.equals(this.password);
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getHometown() {
+        return homeTown;
+    }
+
+    public String getBirthplace() {
+        return birthPlace;
+    }
 }
