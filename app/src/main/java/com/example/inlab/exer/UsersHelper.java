@@ -21,10 +21,10 @@ public class UsersHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME ="Users";
 
     //sentencia global de cracion de la base de datos
-    public static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME + " (user_name VARCHAR(255) PRIMARY KEY, hometown TEXT, birthplace TEXT);";
+    public static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME + " (user_name VARCHAR(255) PRIMARY KEY, password VARCHAR(255), hometown TEXT, birthplace TEXT);";
 
-    public UsersHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public UsersHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
